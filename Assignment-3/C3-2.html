@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Password Validation</h2>
+
+<form>
+    Password:
+    <input type="password"
+           pattern="(?=.*[A-Z])(?=.*[0-9]).{8,}"
+           title="Minimum 8 characters, 1 uppercase letter and 1 number"
+           required>
+
+    <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>

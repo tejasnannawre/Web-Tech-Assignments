@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h2>First 10 Fibonacci Numbers</h2>
+
+    <input type="text" id="result" size="40" readonly>
+
+    <br><br>
+
+    <button onclick="history.back()">Back</button>
+
+    <script>
+        let a = 0, b = 1;
+        let str = "";
+
+        for (let i = 1; i <= 10; i++) {
+            str += a + " ";
+
+            let c = a + b;
+            a = b;
+            b = c;
+        }
+
+        document.getElementById("result").value = str;
+    </script>
+</body>
+</html>

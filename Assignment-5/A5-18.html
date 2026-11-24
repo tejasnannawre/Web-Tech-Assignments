@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h2>Find Maximum Number</h2>
+
+    Number 1: <input type="number" id="a"><br><br>
+    Number 2: <input type="number" id="b"><br><br>
+
+    <button onclick="maximum()">Find Maximum</button>
+
+    <p id="result"></p>
+
+    <script>
+        function maximum() {
+            let x = Number(document.getElementById("a").value);
+            let y = Number(document.getElementById("b").value);
+
+            if (x > y) {
+                document.getElementById("result").innerHTML =
+                    "Maximum Number: " + x;
+            }
+            else {
+                document.getElementById("result").innerHTML =
+                    "Maximum Number: " + y;
+            }
+        }
+    </script>
+</body>
+</html>

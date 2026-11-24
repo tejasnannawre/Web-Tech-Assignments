@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h2>JavaScript Mouse Events</h2>
+
+    <button onclick="clickEvent()">Click Me</button>
+    <br><br>
+
+    <button ondblclick="doubleClick()">Double Click Me</button>
+    <br><br>
+
+    <button onmouseover="mouseOver()">Mouse Over</button>
+    <br><br>
+
+    <button onmouseup="mouseUp()">Mouse Up</button>
+
+    <p id="result"></p>
+
+    <script>
+        function clickEvent() {
+            document.getElementById("result").innerHTML =
+                "Button Clicked!";
+        }
+
+        function doubleClick() {
+            document.getElementById("result").innerHTML =
+                "Double Click Event!";
+        }
+
+        function mouseOver() {
+            document.getElementById("result").innerHTML =
+                "Mouse Over Event!";
+        }
+
+        function mouseUp() {
+            document.getElementById("result").innerHTML =
+                "Mouse Up Event!";
+        }
+    </script>
+</body>
+</html>

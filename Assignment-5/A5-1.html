@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Examination</title>
+</head>
+<body>
+    <h2>Online Examination Form</h2>
+
+    Name: <input type="text" id="name"><br><br>
+
+    Q1. Which language is used for web development?<br>
+    <input type="radio" name="q1" value="HTML"> HTML
+    <input type="radio" name="q1" value="Java"> Java
+    <br><br>
+
+    Q2. Which language is used for styling?<br>
+    <input type="radio" name="q2" value="CSS"> CSS
+    <input type="radio" name="q2" value="Python"> Python
+    <br><br>
+
+    <button onclick="check()">Submit</button>
+
+    <h3 id="result"></h3>
+
+    <script>
+        function check() {
+            let score = 0;
+
+            if (document.querySelector('input[name="q1"]:checked')?.value == "HTML")
+                score++;
+
+            if (document.querySelector('input[name="q2"]:checked')?.value == "CSS")
+                score++;
+
+            document.getElementById("result").innerHTML =
+                "Student: " + document.getElementById("name").value +
+                "<br>Marks: " + score + "/2";
+        }
+    </script>
+</body>
+</html>

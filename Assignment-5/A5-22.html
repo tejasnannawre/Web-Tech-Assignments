@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h2>Multiplication Table</h2>
+
+    Enter Number:
+    <input type="text" id="num">
+
+    <button onclick="printTable()">Print Table</button>
+
+    <br><br>
+
+    <textarea id="result" rows="12" cols="30"></textarea>
+
+    <script>
+        function printTable() {
+            let n = document.getElementById("num").value;
+
+            if (n.trim() == "" || isNaN(n)) {
+                document.body.style.backgroundColor = "red";
+
+                document.getElementById("result").value = "";
+
+                alert("Please enter a valid number");
+            }
+            else {
+                document.body.style.backgroundColor = "white";
+
+                let str = "";
+
+                for (let i = 1; i <= 10; i++) {
+                    str += n + " x " + i + " = " +
+                    (Number(n) * i) + "\n";
+                }
+
+                document.getElementById("result").value = str;
+            }
+        }
+    </script>
+</body>
+</html>

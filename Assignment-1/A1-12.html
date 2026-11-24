@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML5 Elements</title>
+</head>
+<body>
+
+    <h1>HTML5 Elements</h1>
+
+    <h2>Details and Summary</h2>
+
+    <details>
+        <summary>What is HTML?</summary>
+        <p>HTML stands for HyperText Markup Language.</p>
+    </details>
+
+    <h2>Progress Bar</h2>
+
+    <progress value="70" max="100"></progress>
+
+    <h2>Meter</h2>
+
+    <meter value="8" min="0" max="10"></meter>
+
+    <h2>Figure</h2>
+
+    <figure>
+        <img src="image.jpg" width="200" alt="Sample">
+        <figcaption>HTML5 Image</figcaption>
+    </figure>
+
+    <h2>Dialog Box</h2>
+
+    <dialog id="myDialog">
+        Welcome to HTML5!
+        <button onclick="document.getElementById('myDialog').close()">Close</button>
+    </dialog>
+
+    <button onclick="document.getElementById('myDialog').showModal()">
+        Open Dialog
+    </button>
+
+</body>
+</html>

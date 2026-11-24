@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hospital Registration</title>
+</head>
+<body>
+    <h2>Hospital Registration Form</h2>
+
+    Patient Name: <input type="text" id="name"><br><br>
+    Age: <input type="number" id="age"><br><br>
+
+    Gender:
+    <input type="radio" name="gender" value="Male"> Male
+    <input type="radio" name="gender" value="Female"> Female
+    <br><br>
+
+    Department:
+    <select id="dept">
+        <option>General</option>
+        <option>Cardiology</option>
+        <option>Neurology</option>
+        <option>Orthopedic</option>
+    </select>
+    <br><br>
+
+    Mobile: <input type="text" id="mobile"><br><br>
+
+    <button onclick="register()">Register</button>
+
+    <p id="result"></p>
+
+    <script>
+        function register() {
+            let name = document.getElementById("name").value;
+            let age = document.getElementById("age").value;
+            let dept = document.getElementById("dept").value;
+
+            if (name == "" || age == "") {
+                alert("Please fill all fields");
+            } else {
+                document.getElementById("result").innerHTML =
+                    "Patient Registered Successfully!<br>" +
+                    "Name: " + name + "<br>" +
+                    "Age: " + age + "<br>" +
+                    "Department: " + dept;
+            }
+        }
+    </script>
+</body>
+</html>

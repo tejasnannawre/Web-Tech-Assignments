@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dashboard</title>
+
+<style>
+body {
+    font-family: Arial;
+    margin: 0;
+}
+
+header, footer {
+    background-color: navy;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+nav {
+    background-color: lightgray;
+    padding: 15px;
+}
+
+nav a {
+    margin: 15px;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+aside {
+    background-color: #eee;
+    padding: 15px;
+}
+
+canvas {
+    border: 2px solid black;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+    <h1>Student Dashboard</h1>
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#">Profile</a>
+    <a href="#">Results</a>
+</nav>
+
+<main>
+
+    <h2>Performance Graph</h2>
+
+    <canvas id="myCanvas" width="400" height="250">
+    </canvas>
+
+</main>
+
+<aside>
+    <h3>Dashboard Information</h3>
+    <p>Total Students: 50</p>
+    <p>Average Marks: 80%</p>
+</aside>
+
+<footer>
+    <p>Copyright 2026 Student Dashboard</p>
+</footer>
+
+<script>
+
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+
+var height = 50;
+var speed = 2;
+
+function drawGraph() {
+
+    ctx.clearRect(0, 0, c.width, c.height);
+
+    ctx.fillStyle = "blue";
+    ctx.fillRect(50, 200 - height, 60, height);
+
+    ctx.fillStyle = "green";
+    ctx.fillRect(150, 200 - height + 30, 60, height - 30);
+
+    ctx.fillStyle = "orange";
+    ctx.fillRect(250, 200 - height + 60, 60, height - 60);
+
+    height += speed;
+
+    if (height >= 150 || height <= 50) {
+        speed = -speed;
+    }
+
+    requestAnimationFrame(drawGraph);
+}
+
+drawGraph();
+
+</script>
+
+</body>
+</html>

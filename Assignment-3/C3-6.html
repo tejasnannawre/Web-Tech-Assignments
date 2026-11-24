@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Required Fields Form</h2>
+
+<form id="myForm">
+    Name:
+    <input type="text" id="name" required
+           oninput="checkForm()"><br><br>
+
+    Email:
+    <input type="email" id="email" required
+           oninput="checkForm()"><br><br>
+
+    Password:
+    <input type="password" id="password" required
+           oninput="checkForm()"><br><br>
+
+    <input type="submit" id="submitBtn"
+           value="Submit" disabled>
+</form>
+
+<script>
+function checkForm() {
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let password = document.getElementById("password").value;
+
+    document.getElementById("submitBtn").disabled =
+        !(name && email && password);
+}
+</script>
+
+</body>
+</html>

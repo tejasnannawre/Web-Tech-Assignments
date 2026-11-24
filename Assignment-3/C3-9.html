@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Profile Settings</h2>
+
+<form>
+    Name:
+    <input type="text" name="name"><br><br>
+
+    Profile Picture:
+    <input type="file" accept="image/*"><br><br>
+
+    Select Theme Colour:
+    <input type="color" id="color"><br><br>
+
+    <button type="button" onclick="saveProfile()">
+        Save
+    </button>
+</form>
+
+<script>
+function saveProfile() {
+    let color = document.getElementById("color").value;
+
+    document.body.style.backgroundColor = color;
+
+    alert("Profile Settings Saved!");
+}
+</script>
+
+</body>
+</html>

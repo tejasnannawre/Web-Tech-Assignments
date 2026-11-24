@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Rate Your Experience</h2>
+
+<form>
+    Rating:
+    <input type="range" id="rating"
+           min="1" max="10" value="5"
+           oninput="document.getElementById('value').innerHTML=this.value">
+
+    <span id="value">5</span>
+</form>
+
+</body>
+</html>

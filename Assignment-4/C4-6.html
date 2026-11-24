@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="400" height="300"
+style="border:1px solid black;">
+</canvas>
+
+<script>
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+
+// House
+ctx.fillStyle = "orange";
+ctx.fillRect(100, 120, 150, 120);
+
+// Roof
+ctx.beginPath();
+ctx.moveTo(80, 120);
+ctx.lineTo(175, 40);
+ctx.lineTo(270, 120);
+ctx.closePath();
+ctx.fillStyle = "red";
+ctx.fill();
+
+// Window
+ctx.fillStyle = "blue";
+ctx.fillRect(130, 150, 35, 35);
+
+// Door
+ctx.fillStyle = "brown";
+ctx.fillRect(190, 180, 35, 60);
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h2>Student Registration Form</h2>
+
+    Name: <input type="text" id="name"><br><br>
+    Email: <input type="text" id="email"><br><br>
+    Mobile: <input type="text" id="mobile"><br><br>
+
+    <button onclick="validate()">Register</button>
+
+    <p id="result"></p>
+
+    <script>
+        function validate() {
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let mobile = document.getElementById("mobile").value;
+
+            let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            let mobilePattern = /^[0-9]{10}$/;
+
+            if (name == "" || email == "" || mobile == "") {
+                alert("All fields are required");
+            }
+            else if (!emailPattern.test(email)) {
+                alert("Enter valid email address");
+            }
+            else if (!mobilePattern.test(mobile)) {
+                alert("Enter valid 10 digit mobile number");
+            }
+            else {
+                document.getElementById("result").innerHTML =
+                    "Registration Successful!";
+            }
+        }
+    </script>
+</body>
+</html>

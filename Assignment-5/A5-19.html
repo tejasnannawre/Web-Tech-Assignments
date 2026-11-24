@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h2>Arithmetic Operations</h2>
+
+    Number 1: <input type="number" id="a"><br><br>
+    Number 2: <input type="number" id="b"><br><br>
+
+    <button onclick="add()">Addition</button>
+    <button onclick="sub()">Subtraction</button>
+    <button onclick="mul()">Multiplication</button>
+    <button onclick="div()">Division</button>
+
+    <h3 id="result"></h3>
+
+    <script>
+        function add() {
+            result.value = "";
+            document.getElementById("result").innerHTML =
+                "Addition: " + (Number(a.value) + Number(b.value));
+        }
+
+        function sub() {
+            document.getElementById("result").innerHTML =
+                "Subtraction: " + (Number(a.value) - Number(b.value));
+        }
+
+        function mul() {
+            document.getElementById("result").innerHTML =
+                "Multiplication: " + (Number(a.value) * Number(b.value));
+        }
+
+        function div() {
+            if (Number(b.value) == 0) {
+                alert("Cannot divide by zero");
+            }
+            else {
+                document.getElementById("result").innerHTML =
+                    "Division: " + (Number(a.value) / Number(b.value));
+            }
+        }
+    </script>
+</body>
+</html>

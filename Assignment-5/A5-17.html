@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h2>Number Selection</h2>
+
+    <select id="numbers">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+    </select>
+
+    <button onclick="add()">→</button>
+
+    <br><br>
+
+    <textarea id="result" rows="5"></textarea>
+
+    <script>
+        let count = 0;
+
+        function add() {
+            if (count < 10) {
+                let n = document.getElementById("numbers").value;
+
+                document.getElementById("result").value += n + " ";
+
+                count++;
+            }
+            else {
+                alert("Maximum 10 numbers allowed");
+            }
+        }
+    </script>
+</body>
+</html>

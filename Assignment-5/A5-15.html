@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h2>setInterval and clearInterval</h2>
+
+    <h3 id="count">0</h3>
+
+    <button onclick="start()">Start</button>
+    <button onclick="stop()">Stop</button>
+
+    <script>
+        let counter = 0;
+        let timer;
+
+        function start() {
+            if (!timer) {
+                timer = setInterval(function() {
+                    counter++;
+                    document.getElementById("count").innerHTML = counter;
+                }, 1000);
+            }
+        }
+
+        function stop() {
+            clearInterval(timer);
+            timer = null;
+        }
+    </script>
+</body>
+</html>

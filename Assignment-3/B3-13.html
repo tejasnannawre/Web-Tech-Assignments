@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Password Confirmation</h2>
+
+<form>
+    Password:
+    <input type="password" id="pass" required><br><br>
+
+    Confirm Password:
+    <input type="password" id="confirm" required><br><br>
+
+    <input type="submit" value="Register"
+           onclick="if(document.getElementById('pass').value !== document.getElementById('confirm').value){alert('Passwords do not match'); return false;}">
+</form>
+
+</body>
+</html>

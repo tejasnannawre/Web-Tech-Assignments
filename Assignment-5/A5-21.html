@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h2>Replace Letter m With a</h2>
+
+    Enter String:
+    <input type="text" id="str">
+
+    <button onclick="replace()">Replace</button>
+
+    <p id="result"></p>
+
+    <script>
+        function replace() {
+            let s = document.getElementById("str").value;
+
+            let newString = s.replace(/m/gi, "a");
+
+            document.getElementById("result").innerHTML =
+                "Modified String: " + newString;
+        }
+    </script>
+</body>
+</html>

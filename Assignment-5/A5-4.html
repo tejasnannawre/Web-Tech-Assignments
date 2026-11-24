@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Marksheet</title>
+</head>
+<body>
+    <h2>Student Marksheet</h2>
+
+    Enter Seat Number:
+    <input type="text" id="seat">
+    <button onclick="show()">Show Marksheet</button>
+
+    <div id="result"></div>
+
+    <script>
+        function show() {
+            let seat = document.getElementById("seat").value;
+
+            if (seat == "101") {
+                document.getElementById("result").innerHTML =
+                    "Name: Rahul<br>" +
+                    "Seat No: 101<br>" +
+                    "Java: 85<br>" +
+                    "Python: 90<br>" +
+                    "DBMS: 80<br>" +
+                    "Total: 255<br>" +
+                    "Percentage: 85%";
+            }
+            else if (seat == "102") {
+                document.getElementById("result").innerHTML =
+                    "Name: Priya<br>" +
+                    "Seat No: 102<br>" +
+                    "Java: 80<br>" +
+                    "Python: 85<br>" +
+                    "DBMS: 90<br>" +
+                    "Total: 255<br>" +
+                    "Percentage: 85%";
+            }
+            else {
+                document.getElementById("result").innerHTML =
+                    "Invalid Seat Number";
+            }
+        }
+    </script>
+</body>
+</html>

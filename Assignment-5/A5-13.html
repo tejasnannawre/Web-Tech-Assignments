@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h2>Login Page</h2>
+
+    Username: <input type="text" id="user"><br><br>
+    Password: <input type="password" id="pass"><br><br>
+
+    <button onclick="login()">Login</button>
+
+    <p id="result"></p>
+
+    <script>
+        function login() {
+            let u = document.getElementById("user").value;
+            let p = document.getElementById("pass").value;
+
+            if (u == "" && p == "") {
+                alert("Please enter username and password");
+            }
+            else if (u == "") {
+                alert("Username is required");
+            }
+            else if (p == "") {
+                alert("Password is required");
+            }
+            else {
+                document.getElementById("result").innerHTML =
+                    "Login Successful!";
+            }
+        }
+    </script>
+</body>
+</html>
